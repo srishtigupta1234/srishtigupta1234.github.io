@@ -1,0 +1,41 @@
+
+.leftSection {
+  position: fixed;
+  left: 1rem;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 100;
+}
+
+.low {
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid rgba(173, 216, 230, 0.4);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.low img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) saturate(100%) invert(71%) sepia(13%) saturate(1367%) hue-rotate(173deg) brightness(88%) contrast(88%);
+}
+
+.low:hover {
+  transform: scale(1.1);
+  border-color: #5fe1f3;
+  cursor: pointer;
+}
+@media(max-width:768px){
+  .leftSection{
+    display: none;
+  }
+}

@@ -1,0 +1,99 @@
+.skills-container {
+  padding: 80px 60px;
+  background: transparent;
+  color: white;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 60px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+  text-shadow: 0 0 5px rgba(63, 207, 255, 0.6);
+}
+
+.skills-title .highlight {
+  color: #3fcfff;
+}
+
+/* CENTERED GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* CATEGORY HEADER */
+.skills-category h3 {
+  font-size: 20px;
+  color: #d8d8d8;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: 5px solid rgb(18, 2, 84);
+  padding-left: 10px;
+  text-align: left;
+}
+
+/* TAG CONTAINER */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+/* INDIVIDUAL TAG */
+.tag {
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: linear-gradient(rgb(43, 30, 98), rgb(19, 19, 19));
+  font-size: 16px;
+  color: #f0f0f0;
+  transition: 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tag:hover {
+  background: #3fcfff;
+  color: rgb(244, 241, 241);
+  transform: scale(1.1);
+  transition: 1s;
+  cursor: pointer;
+}
+
+/* 📱 MOBILE RESPONSIVE STYLING */
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 40px 20px;
+  }
+
+  .skills-title {
+    font-size: 32px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .skills-category h3 {
+    font-size: 18px;
+  }
+
+  .tag {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+}

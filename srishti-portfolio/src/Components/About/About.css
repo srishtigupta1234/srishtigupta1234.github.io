@@ -1,0 +1,179 @@
+.about {
+  padding: 60px 80px;
+  color: #f5f5f5;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(50, 50, 93, 0.2);
+}
+
+.about-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.about-title h1 {
+  font-weight: 800;
+  font-size: 48px;
+  text-shadow: 0 0 8px rgba(63, 207, 255, 0.6);
+}
+
+.about-title h1 span {
+  color: #7df9ff;
+}
+
+
+/* Section layout */
+.about-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.about-left {
+  flex: 1;
+  height: 350px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(20, 20, 40, 0.6), rgba(30, 30, 60, 0.6));
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    0 8px 16px rgba(100, 100, 255, 0.2),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.about-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  animation: float 3.3s ease-in-out infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.about-left:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.about-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-para p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #eaeaea;
+  text-align: justify;
+}
+
+/* Achievements */
+.about-achievements {
+  margin-top: 40px;
+  background: rgba(57, 47, 191, 0.15);
+  padding: 30px 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 0 10px rgba(63, 207, 255, 0.2);
+}
+
+.about-achievement {
+  text-align: center;
+  flex: 1 1 150px;
+  transition: transform 0.3s ease;
+}
+
+.about-achievement h1 {
+  font-size: 36px;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.about-achievement p {
+  font-size: 15px;
+  color: #aaa;
+}
+
+.about-achievement:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  color: #fff;
+}
+
+.about-achievements hr {
+  height: 60px;
+  border-left: 1px solid hsl(245, 99%, 48%);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about-title h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .about-sections {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-left {
+    display: none;
+  }
+
+  .about-right {
+    width: 100%;
+  }
+
+  .about-achievements {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-achievements hr {
+    display: none;
+  }
+
+  .about-achievement h1 {
+    font-size: 30px;
+  }
+
+  .about-achievement p {
+    font-size: 14px;
+  }
+}

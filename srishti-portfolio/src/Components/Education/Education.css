@@ -1,0 +1,73 @@
+.education-container {
+  padding: 80px 60px;
+  color: #ffffff;
+  background: transparent;
+}
+
+.education-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 48px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.education-title h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: white; /* cyan-glow for teal background */
+  text-shadow: 0 0 5px rgba(63, 207, 255, 0.6);
+}
+
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.edu-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 25px 30px;
+  background: rgba(57, 47, 191, 0.145);;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(63, 207, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 12px 30px rgba(63, 207, 255, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.edu-card h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.edu-inst {
+  font-size: 17px;
+  color: #e1e1e1;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.edu-year {
+  color: #11077a;
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.edu-grade {
+  font-weight: 600;
+  color: #fafa03; /* Soft gold for contrast */
+}

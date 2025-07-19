@@ -1,0 +1,142 @@
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+@keyframes float-pic {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #231c66;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(35, 28, 102, 0.6); /* soft outer glow */
+  margin-bottom: 1.5rem;
+  animation: float-pic 3s ease-in-out infinite;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1) rotate(1deg); /* slight rotate + zoom */
+  box-shadow:
+    0 10px 25px rgba(38, 57, 77, 0.6),
+    0 0 20px #7f7fff; /* glowing border on hover */
+  cursor: pointer;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin: 0.5rem 0;
+  font-weight: 800;
+  
+}
+
+.hero h1 span {
+  background: linear-gradient(rgb(43, 30, 98), rgb(19, 19, 19));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.hero p {
+  width: 50%;
+  max-width: 600px;
+  font-size: 25px;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 2rem;
+}
+
+.hero-action {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-connect {
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+  font-size: 20px;
+  padding: 20px 40px;
+  border-radius: 50px;
+  border: 1px solid white;
+  background: linear-gradient(rgb(85, 75, 127), rgb(46, 39, 67));
+}
+.resume {
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+  font-size: 20px;
+  padding: 20px 40px;
+  border-radius: 50px;
+  border: 1px solid white;
+}
+
+.hero-connect:hover,
+.resume:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-connect,
+  .resume {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    width: 90%;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-connect,
+  .resume {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
