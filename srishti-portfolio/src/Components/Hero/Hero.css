@@ -43,11 +43,13 @@
 }
 
 .hero h1 span {
-  background: linear-gradient(rgb(43, 30, 98), rgb(19, 19, 19));
+background: linear-gradient(to right, #58ecf4, #b0abe0, #58ecf4);
+
+
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: transparent
 }
 
 .hero p {
@@ -93,6 +95,13 @@
   transform: scale(1.1);
   transition: 0.2s;
 }
+.hero-connect:hover{
+   background: #3fcfff;
+  color: rgb(244, 241, 241);
+  transform: scale(1.1);
+  transition: 1s;
+  cursor: pointer;
+}
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 32px;
@@ -115,28 +124,3 @@
   }
 }
 
-@media (max-width: 480px) {
-  .hero {
-    padding: 3rem 1rem;
-  }
-
-  .hero h1 {
-    font-size: 26px;
-  }
-
-  .hero p {
-    font-size: 16px;
-    width: 90%;
-  }
-
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-  }
-
-  .hero-connect,
-  .resume {
-    font-size: 14px;
-    padding: 12px 24px;
-  }
-}

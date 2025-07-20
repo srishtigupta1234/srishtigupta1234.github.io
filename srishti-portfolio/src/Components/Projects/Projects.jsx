@@ -51,20 +51,20 @@ const Projects = () => {
     },
     {
       title: "Online Plant Nursery Management System",
-      image: plantImg, // Add a placeholder image in assets
+      image: plantImg,
       description:
         "Spring Boot backend for an e-commerce plant nursery. Supports customer and admin roles, product management, and RESTful APIs. Implements layered architecture with JPA, Hibernate, and MySQL.",
       github:
         "https://github.com/srishtigupta1234/Online-Plant-Nursery-Backend",
-      demo: "", // No live frontend needed, or add Swagger if hosted
+      demo: "",
     },
     {
       title: "Student Management System (Spring Boot)",
-      image: studentImg, // Add placeholder image
+      image: studentImg,
       description:
         "A Spring Boot-based backend system to manage student records. Includes CRUD APIs for student details, validations, exception handling, and database integration with MySQL.",
       github: "https://github.com/srishtigupta1234/Student_Management_System",
-      demo: "", // Optional: add Swagger/demo if hosted
+      demo: "",
     },
   ];
 

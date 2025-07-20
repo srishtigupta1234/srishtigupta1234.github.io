@@ -1,9 +1,10 @@
 .about {
-  padding: 60px 80px;
+  padding: 80px 80px;
   color: #f5f5f5;
-  background: rgba(255, 255, 255, 0.02);
+  /* background: rgba(255, 255, 255, 0.02); */
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(50, 50, 93, 0.2);
+  /* box-shadow: 0 0 25px rgba(50, 50, 93, 0.2); */
+  overflow: hidden;
 }
 
 .about-title {
@@ -11,34 +12,36 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   flex-wrap: wrap;
   text-align: center;
 }
 
 .about-title h1 {
   font-weight: 800;
-  font-size: 48px;
-  text-shadow: 0 0 8px rgba(63, 207, 255, 0.6);
+  font-size: clamp(28px, 5vw, 48px);
+  text-shadow: 0 0 12px rgba(63, 207, 255, 0.7);
+  letter-spacing: 1px;
+  margin: 0;
 }
 
 .about-title h1 span {
   color: #7df9ff;
 }
 
-
 /* Section layout */
 .about-sections {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  align-items: flex-start;
+  gap: 50px;
+  align-items: stretch;
 }
 
 .about-left {
   flex: 1;
-  height: 350px;
+  min-width: 280px;
   border-radius: 20px;
+  aspect-ratio: 4/3;
   background: linear-gradient(145deg, rgba(20, 20, 40, 0.6), rgba(30, 30, 60, 0.6));
   backdrop-filter: blur(6px);
   box-shadow:
@@ -71,8 +74,8 @@
 }
 
 .about-para p {
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.75;
   color: #eaeaea;
   text-align: justify;
 }
@@ -87,19 +90,21 @@
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
-  box-shadow: 0 0 10px rgba(63, 207, 255, 0.2);
+  box-shadow: 0 0 15px rgba(63, 207, 255, 0.2);
 }
 
 .about-achievement {
   text-align: center;
   flex: 1 1 150px;
   transition: transform 0.3s ease;
+  padding: 10px;
 }
 
 .about-achievement h1 {
-  font-size: 36px;
+  font-size: clamp(28px, 5vw, 36px);
   color: gold;
   margin-bottom: 10px;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
 }
 
 .about-achievement p {
@@ -153,7 +158,10 @@
   }
 
   .about-left {
-    display: none;
+    display: block;
+    width: 100%;
+    aspect-ratio: 3/2;
+    min-height: 220px;
   }
 
   .about-right {
@@ -163,6 +171,7 @@
   .about-achievements {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
   }
 
   .about-achievements hr {
@@ -170,7 +179,7 @@
   }
 
   .about-achievement h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .about-achievement p {

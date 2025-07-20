@@ -12,15 +12,18 @@
   font-size: 48px;
   font-weight: 700;
 }
-.git-title h1{
-    font-size: 48px;
-    text-shadow: 0 0 5px rgba(63, 207, 255, 0.6);
+
+.git-title h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  text-shadow: 0 0 8px rgba(63, 207, 255, 0.6);
+  margin: 0;
 }
 
 .git-title span {
   color: #3fcfff;
 }
 
+/* Layout */
 .department {
   display: flex;
   justify-content: space-between;
@@ -32,29 +35,39 @@
 .git-left {
   flex: 1;
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
 .git-left h1 {
   font-size: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #f5c518;
 }
 
 .git-left p {
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   color: #fcfcfa;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  line-height: 1.6;
 }
-.git-left p a{
-    text-decoration: none;
-   color : white;
-   font-weight: 600;
-   
+
+.git-left p a {
+  text-decoration: none;
+   color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s;
 }
+
+.git-left p a:hover {
+  color: #ffffff;
+}
+
 .contact-details {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
 .contact {
@@ -62,20 +75,22 @@
   align-items: center;
   gap: 14px;
   font-size: 16px;
-  color: #121111;
 }
 
 .contact img {
   height: 24px;
   width: 24px;
   object-fit: contain;
+  filter: brightness(1.2);
 }
-.contact p{
-    margin-top: 20px;
-  color: white;
-   font-weight: 600;
+
+.contact p {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 600;
 }
-/* Right Side Form */
+
+/* Right Side - Contact Form */
 .contact-right {
   flex: 1;
   display: flex;
@@ -87,6 +102,7 @@
   backdrop-filter: blur(10px);
   min-width: 320px;
   border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(63, 207, 255, 0.05);
 }
 
 .contact-right label {
@@ -104,36 +120,71 @@
   background: rgba(255, 255, 255, 0.1);
   color: white;
   font-size: 14px;
+  font-family: inherit;
+  transition: background 0.3s, transform 0.2s;
 }
 
-
-.contact-right textarea::placeholder{
-   color: #cccccc; 
-  opacity: 1;  
+.contact-right input::placeholder,
+.contact-right textarea::placeholder {
+  color: #cccccc;
+  opacity: 1;
 }
-.contact-right input::placeholder{
-     color: #cccccc; 
-  opacity: 1;  
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.01);
 }
 
 .contact-right textarea {
   resize: none;
+  min-height: 120px;
 }
 
 .contact-submit {
-  background: linear-gradient(rgb(43, 30, 98), rgb(19, 19, 19));
+ background: linear-gradient(rgb(85, 75, 127), rgb(46, 39, 67));
   color: white;
   font-weight: bold;
-  padding: 20px;
-    font-size: 15px;
+  padding: 16px;
+  font-size: 15px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   margin-top: 10px;
 }
 
 .contact-submit:hover {
   background: #3fcfff;
-  color: rgb(244, 241, 241);
+  color: #111;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .getInTouch {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .git-title h1 {
+    font-size: 32px;
+  }
+
+  .department {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .git-left h1 {
+    font-size: 26px;
+  }
+
+  .contact-right {
+    padding: 20px;
+  }
+
+  .contact-submit {
+    padding: 14px;
+    font-size: 14px;
+  }
 }

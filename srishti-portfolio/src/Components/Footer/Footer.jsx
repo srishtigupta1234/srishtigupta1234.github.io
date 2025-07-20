@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-top">
             <div className="footer-top-left">
                 <img src={icon} alt="" />
-                <p>I am a full stack developer from, India with 10 years of experience in companies like Microsoft, Tesla and Apple.</p>
+                <p> I’ve spent a decade building tech with the best — now I’m building for impact, my way.</p>
             </div>
             <div className="footer-top-right">
                 <div className="footer-email-input">
@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
         <hr />
         <div className="footer-bottom">
-            <p className="footer-bottom-left">© 2025 Srishti Gupta. All rights reserved.</p>
+            <p className="footer-bottom-left">  Built with curiosity, caffeine & clean code — © 2025 Srishti Gupta</p>
             <div className="footer-bottom-right">
                 <p>Term of Services</p>
                 <p>Privacy Policy</p>

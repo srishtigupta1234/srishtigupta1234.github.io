@@ -80,14 +80,14 @@
 }
 
 .footer-subscribe {
-  background: linear-gradient(to right, #2b1e62, #131313);
+  background: linear-gradient(rgb(85, 75, 127), rgb(46, 39, 67));
   color: white;
   padding: 10px 24px;
   border-radius: 50px;
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
-  border: 1px solid transparent;
+  
   transition: all 0.3s ease;
   width: fit-content;
 }
