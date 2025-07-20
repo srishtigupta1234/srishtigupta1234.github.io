@@ -26,7 +26,7 @@ const Hero = () => {
         Hi, I'm <span>Srishti Gupta</span>
       </h1>
       <p data-aos="fade-up" data-aos-delay="200">
-        A passionate Frontend Developer turning ideas into elegant web
+        A passionate Full Stack Developer turning ideas into elegant web
         experiences.
       </p>
       <div className="hero-action" data-aos="fade-up" data-aos-delay="400">
