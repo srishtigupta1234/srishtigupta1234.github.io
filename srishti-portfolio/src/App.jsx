@@ -27,13 +27,6 @@ const App = () => {
           src="https://lottie.host/6feadcc9-2fd5-4363-845c-978b82781470/O7059DG9nS.lottie"
           autoplay
           loop
-           style={{ 
-              width: "100%", 
-              height: "100%",
-              position: "absolute",
-              top: 0,
-              left: 0
-            }}
         />
       </div>
       </div>
