@@ -18,7 +18,7 @@ const About = () => {
       </div>
 
       <div className="about-sections">
-        <div className="about-left" data-aos="zoom-in-right">
+        <div className="about-left">
           <img src={me4} alt="" />
         </div>
 

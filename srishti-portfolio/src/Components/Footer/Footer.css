@@ -134,3 +134,24 @@ hr {
 .footer-bottom-right p:hover {
   color: #f5c518;
 }
+
+@media screen and (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-top-right {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom-right {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}

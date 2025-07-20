@@ -1,7 +1,8 @@
 
 .hero {
   text-align: center;
-  padding: 4rem 2rem;
+  padding-top: 200px;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,6 +104,9 @@ background: linear-gradient(to right, #58ecf4, #b0abe0, #58ecf4);
   cursor: pointer;
 }
 @media (max-width: 768px) {
+  /* .hero{
+   padding-top:100px;
+  } */
   .hero h1 {
     font-size: 32px;
   }

@@ -88,12 +88,12 @@
 .timeline-content h4 {
   margin: 8px 0;
   font-weight: 600;
-  color: #0b0b0b;
+  color: #7df9ff;
   font-size: 19px;
 }
 
 .timeline-content h4 span {
-  color: #150565;
+  color: #e3def8;
 }
 
 .timeline-content p {
@@ -120,7 +120,8 @@
   font-size: 13px;
 }
 @media (max-width: 768px) {
-  .experience {
+  .experience{
+     width:100%;
     padding: 2rem 1rem;
   }
 

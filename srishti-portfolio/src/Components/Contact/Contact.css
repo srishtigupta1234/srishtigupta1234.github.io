@@ -164,6 +164,7 @@
 /* Responsive Tweaks */
 @media (max-width: 768px) {
   .getInTouch {
+    width:100%;
     padding: 40px 20px;
     gap: 40px;
   }
