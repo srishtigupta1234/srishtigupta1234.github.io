@@ -15,7 +15,7 @@
   align-items: center;
   z-index: 1000;
   padding: 10px 20px;
-  background-color: rgba(35, 12, 105, 0.6);
+  background-color: rgba(238, 236, 246, 0.081);
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }

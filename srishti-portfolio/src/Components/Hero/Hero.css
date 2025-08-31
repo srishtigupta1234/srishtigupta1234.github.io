@@ -1,4 +1,4 @@
-
+/* 🌟 HERO SECTION */
 .hero {
   text-align: center;
   padding-top: 200px;
@@ -8,6 +8,8 @@
   align-items: center;
   color: white;
 }
+
+/* 🌟 Floating animation for profile picture */
 @keyframes float-pic {
   0% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
@@ -20,66 +22,108 @@
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #231c66;
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.4),
-    0 0 15px rgba(35, 28, 102, 0.6); /* soft outer glow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4),
+              0 0 15px rgba(35, 28, 102, 0.6);
   margin-bottom: 1.5rem;
   animation: float-pic 3s ease-in-out infinite;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .profile-pic:hover {
-  transform: scale(1.1) rotate(1deg); /* slight rotate + zoom */
-  box-shadow:
-    0 10px 25px rgba(38, 57, 77, 0.6),
-    0 0 20px #7f7fff; /* glowing border on hover */
+  transform: scale(1.1) rotate(1deg);
+  box-shadow: 0 10px 25px rgba(38, 57, 77, 0.6),
+              0 0 20px #7f7fff;
   cursor: pointer;
 }
 
+/* 🌟 Main Heading */
 .hero h1 {
   font-size: 50px;
   margin: 0.5rem 0;
   font-weight: 800;
-  
 }
 
 .hero h1 span {
-background: linear-gradient(to right, #58ecf4, #b0abe0, #58ecf4);
-
-
+  background: linear-gradient(to right, #58ecf4, #b0abe0, #58ecf4);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent
+  color: transparent;
 }
 
-.hero p {
-  width: 50%;
-  max-width: 600px;
+/* 🌟 Subheading (Tagline) */
+.tagline {
+  font-size: 30px;
+  font-weight: 500;
+  color: #b0c4de;
+  margin: 10px auto ;
+  line-height: 1.6;
+  padding: 0 15px;
+}
+#skills{
+  margin:0 0 0 0;
+}
+
+.hero-subtitle {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* margin: 20px auto; */
+  gap: 10px;
+}
+
+.subtitle-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.hero-subtitle p {
   font-size: 25px;
   font-weight: 600;
   color: #ddd;
-  margin-bottom: 2rem;
+  margin: 0;
 }
 
+.subtitle-desc {
+  font-size: 22px;
+  color: #bbb;
+  font-weight: 500;
+}
+
+/* 🌟 Typing Wrapper */
+.typing-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+.typing-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+/* 🌟 Highlight text */
+.highlight {
+  color: #58ecf4;
+  font-weight: 700;
+}
+
+/* 🌟 Hero Buttons */
 .hero-action {
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 
-.hero-connect {
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s ease;
-  color: white;
-  font-size: 20px;
-  padding: 20px 40px;
-  border-radius: 50px;
-  border: 1px solid white;
-  background: linear-gradient(rgb(85, 75, 127), rgb(46, 39, 67));
-}
+.hero-connect,
 .resume {
   font-weight: bold;
   cursor: pointer;
@@ -91,34 +135,52 @@ background: linear-gradient(to right, #58ecf4, #b0abe0, #58ecf4);
   border: 1px solid white;
 }
 
+.hero-connect {
+  background: linear-gradient(rgb(85, 75, 127), rgb(46, 39, 67));
+}
+
 .hero-connect:hover,
 .resume:hover {
   transform: scale(1.1);
-  transition: 0.2s;
+  transition: 0.3s ease;
 }
-.hero-connect:hover{
-   background: #3fcfff;
-  color: rgb(244, 241, 241);
-  transform: scale(1.1);
-  transition: 1s;
-  cursor: pointer;
+
+.hero-connect:hover {
+  background: #3fcfff;
+  color: #f4f1f1;
 }
+
+/* 🌟 Responsive Adjustments */
 @media (max-width: 768px) {
-  /* .hero{
-   padding-top:100px;
-  } */
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
   .hero h1 {
     font-size: 32px;
   }
 
-  .hero p {
+  .tagline {
     font-size: 18px;
-    width: 80%;
+    line-height: 1.4;
+  }
+
+  .hero-subtitle p {
+    font-size: 20px;
+  }
+
+  .subtitle-desc {
+    font-size: 18px;
   }
 
   .profile-pic {
     width: 180px;
     height: 180px;
+  }
+
+  .typing-wrapper {
+    max-width: 90%;
   }
 
   .hero-connect,
@@ -128,3 +190,9 @@ background: linear-gradient(to right, #58ecf4, #b0abe0, #58ecf4);
   }
 }
 
+@media (max-width: 480px) {
+  .subtitle-line {
+    flex-direction: column; /* ✅ stacks typing + text on small screens */
+    gap: 5px;
+  }
+}

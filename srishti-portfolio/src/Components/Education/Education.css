@@ -33,7 +33,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 25px 30px;
-  background: rgba(57, 47, 191, 0.145);;
+  background: rgba(57, 47, 191, 0.074);
   box-shadow:
     0 8px 24px rgba(0, 0, 0, 0.3),
     0 0 15px rgba(63, 207, 255, 0.15);
@@ -43,8 +43,8 @@
 .edu-card:hover {
   transform: translateY(-6px);
   box-shadow:
-    0 12px 30px rgba(63, 207, 255, 0.4),
-    0 0 20px rgba(255, 255, 255, 0.1);
+   0 10px 25px rgba(38, 57, 77, 0.6),
+    0 0 20px #7f7fff7a;
 }
 
 .edu-card h2 {
@@ -61,7 +61,7 @@
 }
 
 .edu-year {
-  color: #11077a;
+  color: #6fd9f7;
   font-weight: 500;
   margin-bottom: 6px;
   font-style: italic;

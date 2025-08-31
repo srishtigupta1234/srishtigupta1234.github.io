@@ -1,155 +1,110 @@
 .about {
-  width:90%;
-  padding: 80px 80px;
-   margin: 0 auto;
-  color: #f5f5f5;
-  /* background: rgba(255, 255, 255, 0.02); */
-  border-radius: 20px;
-  /* box-shadow: 0 0 25px rgba(50, 50, 93, 0.2); */
-  overflow: hidden;
-}
-
-.about-title {
+  width: 100%;
+  min-height: 100vh; /* Full screen height */
+  padding: 80px 8%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
-  text-align: center;
+  color: #f5f5f5;
 }
 
 .about-title h1 {
   font-weight: 800;
-  font-size: clamp(28px, 5vw, 48px);
-  text-shadow: 0 0 12px rgba(63, 207, 255, 0.7);
-  letter-spacing: 1px;
-  margin: 0;
+  font-size: clamp(32px, 5vw, 54px);
+  text-shadow: 0 0 15px rgba(63, 207, 255, 0.8);
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-.about-title h1 span {
+.about-title span {
   color: #7df9ff;
 }
 
-/* Section layout */
+/* Split layout */
 .about-sections {
   display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
-  align-items: stretch;
 }
 
 .about-left {
   flex: 1;
   min-width: 280px;
+  max-width: 450px;
   border-radius: 20px;
-  aspect-ratio: 4/3;
-  background: linear-gradient(145deg, rgba(20, 20, 40, 0.6), rgba(30, 30, 60, 0.6));
-  backdrop-filter: blur(6px);
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.5),
-    0 8px 16px rgba(100, 100, 255, 0.2),
-    inset 0 0 10px rgba(255, 255, 255, 0.05);
   overflow: hidden;
-  animation: fadeIn 0.6s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-left img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; /* 👈 keeps aspect ratio */
   border-radius: 20px;
+  object-fit: cover; /* covers nicely inside box */
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 .about-left:hover img {
   transform: scale(1.05);
-  filter: brightness(1.1);
+  filter: brightness(1.15);
 }
+
 .about-right {
   flex: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  min-width: 300px;
 }
 
 .about-para p {
   font-size: clamp(16px, 2vw, 18px);
-  line-height: 1.75;
+  line-height: 1.8;
+  margin-bottom: 18px;
   color: #eaeaea;
   text-align: justify;
 }
 
-/* Achievements */
+/* Achievements as a grid */
 .about-achievements {
-  margin-top: 40px;
-  background: rgba(57, 47, 191, 0.15);
-  padding: 30px 20px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-  box-shadow: 0 0 15px rgba(63, 207, 255, 0.2);
-}
-
-.about-achievement {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
   text-align: center;
-  flex: 1 1 150px;
-  transition: transform 0.3s ease;
-  padding: 10px;
 }
 
-.about-achievement h1 {
-  font-size: clamp(28px, 5vw, 36px);
+.achievement-card {
+  background: rgba(57, 47, 191, 0.08);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(38, 57, 77, 0.6),
+    0 0 15px rgba(127, 127, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.achievement-card h1 {
+  font-size: clamp(28px, 4vw, 38px);
   color: gold;
   margin-bottom: 10px;
-  text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
 }
 
-.about-achievement p {
+.achievement-card p {
   font-size: 15px;
-  color: #aaa;
+  color: #ccc;
 }
 
-.about-achievement:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-  color: #fff;
+.achievement-card:hover {
+  transform: translateY(-8px) scale(1.05);
 }
 
-.about-achievements hr {
-  height: 60px;
-  border-left: 1px solid hsl(245, 99%, 48%);
-}
-
-/* Animations */
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   .about {
-    width:100%;
-    padding: 40px 20px;
-  }
-
-  .about-title h1 {
-    font-size: 32px;
-    text-align: center;
+    padding: 50px 20px;
   }
 
   .about-sections {
@@ -158,31 +113,20 @@
   }
 
   .about-left {
-    display: block;
     width: 100%;
-    aspect-ratio: 3/2;
-    min-height: 220px;
+    max-width: 100%;
   }
 
-  .about-right {
-    width: 100%;
+  .about-left img {
+     width: 100%;        /* Image scales with parent container */
+  max-width: 500px;   /* Prevents image from becoming too large */
+  height: auto;       /* Maintains aspect ratio */
+  display: block;     /* Removes inline spacing issues */
+  margin: 0 auto;     /* Centers image */
+  border-radius: 15px; 
   }
 
   .about-achievements {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .about-achievements hr {
-    display: none;
-  }
-
-  .about-achievement h1 {
-    font-size: 28px;
-  }
-
-  .about-achievement p {
-    font-size: 14px;
+    grid-template-columns: 1fr;
   }
 }

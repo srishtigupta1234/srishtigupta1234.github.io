@@ -39,8 +39,9 @@
 
 .project-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 40px rgba(63, 207, 255, 0.5);
-  border-color: #3fcfff;
+  box-shadow: 0 10px 25px rgba(38, 57, 77, 0.6),
+    0 0 20px #7f7fff25;
+  border-color:#231c661d;
 }
 
 .project-card img {

@@ -38,7 +38,7 @@ const Projects = () => {
       image: axiosImg,
       description:
         "Built a full-stack CRUD app using Axios and JSON-server for managing user data. Supports create, read, update, and delete.",
-      github: "https://github.com/srishtigupta1234/React_Axios_Crud_Fullstack",
+      github: "https://github.com/srishtigupta1234/",
       demo: "https://reactaxiosfullstack.netlify.app/",
     },
     {
@@ -46,7 +46,7 @@ const Projects = () => {
       image: weatherImg,
       description:
         "Simple weather app that fetches real-time weather data using the OpenWeatherMap API and React.",
-      github: "https://github.com/srishtigupta1234/weather_detector",
+      github: "https://github.com/srishtigupta1234/",
       demo: "https://frolicking-conkies-b32159.netlify.app/",
     },
     {
@@ -55,7 +55,7 @@ const Projects = () => {
       description:
         "Spring Boot backend for an e-commerce plant nursery. Supports customer and admin roles, product management, and RESTful APIs. Implements layered architecture with JPA, Hibernate, and MySQL.",
       github:
-        "https://github.com/srishtigupta1234/Online-Plant-Nursery-Backend",
+        "https://github.com/srishtigupta1234/OnlineNurseryPlanManagementSystem",
       demo: "",
     },
     {
@@ -63,7 +63,7 @@ const Projects = () => {
       image: studentImg,
       description:
         "A Spring Boot-based backend system to manage student records. Includes CRUD APIs for student details, validations, exception handling, and database integration with MySQL.",
-      github: "https://github.com/srishtigupta1234/Student_Management_System",
+      github: "https://github.com/srishtigupta1234/Student-Management-System",
       demo: "",
     },
   ];
@@ -83,9 +83,12 @@ const Projects = () => {
               <a href={proj.github} target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
-              <a href={proj.demo} target="_blank" rel="noopener noreferrer">
-                Live Demo
-              </a>
+              {/* ✅ Show Live Demo only if proj.demo is not empty */}
+              {proj.demo && (
+                <a href={proj.demo} target="_blank" rel="noopener noreferrer">
+                  Live Demo
+                </a>
+              )}
             </div>
           </div>
         ))}

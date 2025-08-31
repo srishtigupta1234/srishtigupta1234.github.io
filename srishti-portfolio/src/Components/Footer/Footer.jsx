@@ -12,11 +12,7 @@ const Footer = () => {
                 <p> I’ve spent a decade building tech with the best — now I’m building for impact, my way.</p>
             </div>
             <div className="footer-top-right">
-                <div className="footer-email-input">
-                   <img src={user} alt="" />
-                   <input type="email" name="email" id="" placeholder='Enter your email'/>
-                </div>
-                <div className="footer-subscribe">Subscribe</div>
+              
             </div>
         </div>
         <hr />

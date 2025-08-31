@@ -10,18 +10,22 @@ const About = () => {
   }, []);
 
   return (
-    <div id="about" className="about">
+    <section id="about" className="about">
+      {/* Title */}
       <div className="about-title" data-aos="fade-down">
         <h1>
           ABOUT <span>ME</span>
         </h1>
       </div>
 
+      {/* Content Split */}
       <div className="about-sections">
-        <div className="about-left">
-          <img src={me4} alt="" />
+        {/* Left Image */}
+        <div className="about-left" data-aos="fade-right">
+          <img src={me4} alt="About Me" />
         </div>
 
+        {/* Right Text */}
         <div className="about-right" data-aos="fade-left">
           <div className="about-para">
             <p>
@@ -30,43 +34,36 @@ const About = () => {
               foundation in HTML, CSS, JavaScript, and React, I bring both
               creativity and precision to every project. Whether it's building
               elegant UIs or solving complex problems, I love turning ideas into
-              interactive realities. Currently exploring modern web technologies
-              and always open to exciting collaborations.
+              interactive realities.
             </p>
             <p>
-              I’ve applied my development skills through impactful real-world
-              projects like Digital Gram Panchayat, a rural scheme platform that
-              digitized manual workflows for over 200 users, and Career Campus,
-              a college recommendation and application portal built with modern
-              frontend tools and Firebase. I enjoy transforming complex logic
-              into intuitive, elegant interfaces and have a strong grasp of
-              frontend technologies, Firebase services, and responsive design
-              principles. As a curious and committed learner, I’m constantly
-              exploring new tools and frameworks, driven by a desire to create
-              meaningful, user-centered solutions that blend both technical
-              depth and visual clarity.
+              I’ve applied my skills to impactful real-world projects like
+              <b> Digital Gram Panchayat</b> (digitizing workflows for 200+
+              users) and <b>Career Campus</b> (a college recommendation &
+              application portal). I enjoy transforming complex logic into
+              intuitive, elegant interfaces and exploring new frameworks to
+              create meaningful, user-centered solutions.
             </p>
           </div>
         </div>
       </div>
 
+      {/* Achievements */}
       <div className="about-achievements" data-aos="fade-up">
-        <div className="about-achievement">
+        <div className="achievement-card">
           <h1>1+</h1>
           <p>YEARS OF EXPERIENCE</p>
         </div>
-        <hr />
-        <div className="about-achievement">
+        <div className="achievement-card">
           <h1>10+</h1>
           <p>PROJECTS COMPLETED</p>
         </div>
-        <hr />
-        <div className="about-achievement">
+        <div className="achievement-card">
           <h1>15+</h1>
           <p>HAPPY CLIENTS</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

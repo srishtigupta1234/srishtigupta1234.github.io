@@ -1,7 +1,6 @@
 import React from "react";
 import "./Experience.css";
 
-
 const experiences = [
   {
     title: "Web Development Intern",
@@ -11,6 +10,8 @@ const experiences = [
     description:
       "Built dynamic web applications using React, HTML, CSS, and Firebase. Developed reusable components and integrated real-time database functionalities.",
     tech: ["React", "HTML", "CSS", "Firebase", "GitHub"],
+    certificate:
+      "https://drive.google.com/file/d/1CD2q26C6XG7wAf6qXgtHHrpcgPyRDPsl/view?usp=sharing",
   },
   {
     title: "DSA + Java Intern",
@@ -20,6 +21,7 @@ const experiences = [
     description:
       "Solved 100+ Java & DSA problems, participated in mock interviews, and completed structured modules covering recursion, OOP, and collections.",
     tech: ["Java", "DSA", "OOP", "GitHub"],
+    certificate: "#",
   },
 ];
 
@@ -30,7 +32,6 @@ const Experience = () => {
         <h1>
           WORK <span>EXPERIENCE</span>
         </h1>
-       
       </div>
       <div className="timeline">
         {experiences.map((exp, index) => (
@@ -54,6 +55,17 @@ const Experience = () => {
                   </span>
                 ))}
               </div>
+
+              {exp.certificate && exp.certificate !== "#" && (
+                <a
+                  href={exp.certificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="certificate-btn"
+                >
+                  View Certificate
+                </a>
+              )}
             </div>
           </div>
         ))}
