@@ -53,6 +53,9 @@
 
 /* INDIVIDUAL TAG */
 .tag {
+  display: flex;
+  align-items: center; 
+  gap: 8px;          
   padding: 8px 16px;
   border-radius: 30px;
   background: linear-gradient(rgb(43, 30, 98), rgb(19, 19, 19));
@@ -63,11 +66,21 @@
 }
 
 .tag:hover {
-  background: #3fcfff;
   color: rgb(244, 241, 241);
   transform: scale(1.1);
   transition: 1s;
   cursor: pointer;
+}
+
+/* ICON INSIDE TAG */
+.tag .icon {
+  font-size: 20px;  /* ✅ makes icon slightly bigger */
+  display: flex;
+  align-items: center;
+}
+
+.tag .skill-text {
+  font-weight: 500;
 }
 
 /* 📱 MOBILE RESPONSIVE STYLING */
@@ -95,5 +108,9 @@
   .tag {
     font-size: 14px;
     padding: 6px 14px;
+  }
+
+  .tag .icon {
+    font-size: 16px; /* ✅ smaller on mobile */
   }
 }

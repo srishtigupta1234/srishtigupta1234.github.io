@@ -13,6 +13,8 @@ import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import BackgroundAnimation from "./Components/BackgroundAnimation/BackgroundAnimation";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import Certificate from "./Components/Certificate/Cerificate";
 
 const App = () => {
    useEffect(() => {
@@ -24,12 +26,14 @@ const App = () => {
         <BackgroundAnimation/>
         <Navbar/>
         <LeftSection/>
+        <ScrollToTop/>
         <Hero/>
         <About/>
         <Experience/>
         <Skills/>
         <Education/>
         <Projects/>
+        <Certificate/>
         <Contact/>
         <Footer/>
       </div>

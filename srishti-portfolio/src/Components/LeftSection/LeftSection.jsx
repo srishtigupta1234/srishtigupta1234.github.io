@@ -1,7 +1,7 @@
 import React from 'react'
 import './LeftSection.css'
 import twitter from '../../assets/code.png';
-import linkedin from '../../assets/linkedin.png';
+import linkedin from '../../assets/social.png';
 import github from '../../assets/github2.png';
 
 const LeftSection = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import "./Contact.css";
 import email from "../../assets/email.svg";
-import linkedin from "../../assets/linkedin.png";
+import linkedin from "../../assets/linked.png";
 import github from "../../assets/github.png";
 import location from "../../assets/location.svg";
 import AOS from "aos";

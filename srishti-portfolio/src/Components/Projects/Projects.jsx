@@ -6,8 +6,8 @@ import "aos/dist/aos.css";
 // Sample images
 import dgpImg from "../../assets/dgp_insight.png";
 import campusImg from "../../assets/career_insight.png";
-import axiosImg from "../../assets/blog.png";
-import weatherImg from "../../assets/location.png";
+import football from "../../assets/football.png";
+import game from "../../assets/game.png";
 import studentImg from "../../assets/student.png";
 import plantImg from "../../assets/plant.jpeg";
 
@@ -34,20 +34,21 @@ const Projects = () => {
       demo: "https://courageous-crepe-96002b.netlify.app/home",
     },
     {
-      title: "React Axios CRUD App",
-      image: axiosImg,
+      title: "Upcoming Football Events",
+      image: football,
       description:
-        "Built a full-stack CRUD app using Axios and JSON-server for managing user data. Supports create, read, update, and delete.",
-      github: "https://github.com/srishtigupta1234/",
-      demo: "https://reactaxiosfullstack.netlify.app/",
+        "A frontend application that displays upcoming football events in a clean and interactive way. Built using HTML, CSS, and JavaScript, focusing on responsive design and user-friendly event browsing.",
+      github: "https://github.com/srishtigupta1234/Upcoming-Fooball-Event",
+      demo: "https://marvelous-dango-d9f138.netlify.app/",
     },
+
     {
-      title: "Weather Detector",
-      image: weatherImg,
+      title: "Alien Invasion – Space Shooter Game",
+      image: game,
       description:
-        "Simple weather app that fetches real-time weather data using the OpenWeatherMap API and React.",
-      github: "https://github.com/srishtigupta1234/",
-      demo: "https://frolicking-conkies-b32159.netlify.app/",
+        "Alien Invasion is a classic arcade-style space shooter built with Python and Pygame. Players control a spaceship to defend Earth by shooting waves of alien invaders. The game features smooth controls, responsive gameplay, and retro graphics, demonstrating core game development skills.",
+      github: "https://github.com/srishtigupta1234/Alien-Invasion-",
+      demo: "",
     },
     {
       title: "Online Plant Nursery Management System",
@@ -83,7 +84,6 @@ const Projects = () => {
               <a href={proj.github} target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
-              {/* ✅ Show Live Demo only if proj.demo is not empty */}
               {proj.demo && (
                 <a href={proj.demo} target="_blank" rel="noopener noreferrer">
                   Live Demo

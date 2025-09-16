@@ -23,7 +23,6 @@ const Navbar = () => {
     <div className="nav">
       <img src={icon2} alt="logo" className="logo" />
 
-      {/* Only show open menu icon when menu is closed */}
       {!menuOpen && (
         <img
           src={toggle}
@@ -33,7 +32,6 @@ const Navbar = () => {
         />
       )}
 
-      {/* Only show close icon when menu is open */}
       {menuOpen && (
         <img
           src={close}
@@ -44,7 +42,7 @@ const Navbar = () => {
       )}
 
       <ul ref={menuRef} className={`nav-menu ${menuOpen ? "active" : ""}`}>
-        {["hero", "about", "experience", "skills", "education", "projects", "contact"].map((item) => (
+        {["hero", "about", "experience", "skills", "education", "projects","certificate", "contact"].map((item) => (
           <li key={item}>
             <AnchorLink
               className="anchor-link"

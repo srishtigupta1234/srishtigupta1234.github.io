@@ -29,30 +29,29 @@
   flex-wrap: wrap;
 }
 
-.about-left {
+/* .about-left {
   flex: 1;
-  min-width: 280px;
-  max-width: 450px;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about-left img {
-  width: 100%;
-  height: auto; /* 👈 keeps aspect ratio */
-  border-radius: 20px;
-  object-fit: cover; /* covers nicely inside box */
-  transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-.about-left:hover img {
+.about-left:hover{
   transform: scale(1.05);
   filter: brightness(1.15);
+} */
+ .player-wrapper {
+  display: inline-block;
+    animation: float-pic 3s ease-in-out infinite;
+  /* box-shadow: 0 20px 40px rgba(0,0,0,0.3); */
+  transition: transform 0.3s, filter 0.3s;
+
 }
+.player-wrapper:hover {
+  transform: scale(1.05);
+  
+}
+
 
 .about-right {
   flex: 2;
