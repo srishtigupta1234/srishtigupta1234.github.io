@@ -72,7 +72,7 @@ const Projects = () => {
   return (
     <div className="projects-container" id="projects">
       <h1 className="projects-title" data-aos="fade-up">
-        My <span>Projects</span>
+        MY <span>PROJECTS</span>
       </h1>
       <div className="projects-grid">
         {projects.map((proj, index) => (

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Hero.css";
-import me4 from "../../assets/me1.jpg";
+import me4 from "../../assets/profile.jpeg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Player } from "@lottiefiles/react-lottie-player";
 import animationData from "../../assets/Robot says hello.json";

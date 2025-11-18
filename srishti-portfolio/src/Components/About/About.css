@@ -11,13 +11,13 @@
 .about-title h1 {
   font-weight: 800;
   font-size: clamp(32px, 5vw, 54px);
-  text-shadow: 0 0 15px rgba(63, 207, 255, 0.8);
+ text-shadow: 0 0 5px rgba(63, 207, 255, 0.6);
   text-align: center;
   margin-bottom: 60px;
 }
 
 .about-title span {
-  color: #7df9ff;
+  color: rgba(63, 207, 255, 0.9)f;
 }
 
 /* Split layout */

@@ -17,7 +17,7 @@
 
 .git-title h1 {
   font-size: clamp(32px, 5vw, 48px);
-  text-shadow: 0 0 8px rgba(63, 207, 255, 0.6);
+  text-shadow: 0 0 5px rgba(63, 207, 255, 0.6);
   margin: 0;
 }
 

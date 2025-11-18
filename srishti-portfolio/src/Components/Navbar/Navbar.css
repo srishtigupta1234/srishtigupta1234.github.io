@@ -44,10 +44,39 @@
   transition: color 0.3s;
 }
 
-/* .nav-menu li:hover,
-.anchor-link:hover {
-  color: #f5c518;
-} */
+/* Navbar menu item hover with gradient text */
+.nav-menu li {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-menu li:hover,
+.anchor-link:hover,
+.nav-connect p:hover {
+  /* Gradient text */
+  background: linear-gradient(90deg, rgb(82, 82, 185), #cbf4f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transform: translateY(-2px); /* subtle lift */
+}
+
+/* Optional underline effect on hover */
+.nav-menu li::after,
+.nav-connect p::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg,  #cbf4f7,#1883f5);
+  transition: width 0.3s ease;
+}
+
+.nav-menu li:hover::after,
+.nav-connect p:hover::after {
+  width: 100%;
+}
+
 
 .nav-link{
   text-decoration: none;
@@ -75,7 +104,6 @@
   cursor: pointer;
 }
 
-/* ========== Mobile Styles ========== */
 .nav-mob-open,
 .nav-mob-close {
   display: none;

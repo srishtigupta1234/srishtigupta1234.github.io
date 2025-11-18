@@ -1,0 +1,133 @@
+.github-section {
+  color: #f0f0f0;
+  padding: 80px 20px;
+  border-radius: 10px;
+  margin: 0 auto 50px auto;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title span {
+  color: #7df9ff; /* Highlighted cyan accent */
+}
+
+/* Stats Cards (GitHub stats & top langs) */
+.github-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px; /* optional max width to prevent stretching too wide */
+  margin-bottom: 50px;
+}
+
+.github-card {
+  flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis */
+  min-width: 250px; /* ensures cards don't shrink too small */
+  max-width: 400px; /* optional to prevent too wide cards on large screens */
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.github-card:hover {
+  transform: scale(1.03);
+}
+
+/* Calendar Section */
+.github-calendar {
+  width: 100%;
+  max-width: 1000px;   /* adjust based on your layout */
+  margin-bottom: 50px;
+  text-align: center;
+  overflow-x: auto;   /* allow horizontal scroll if needed */
+  padding: 0 10px;    /* some padding for small screens */
+}
+
+.github-calendar h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #00d8ff;
+  margin-bottom: 20px;
+}
+
+/* Responsive wrapper for GitHub calendar */
+.github-calendar .calendar-responsive {
+  width: 100%;
+  display: inline-block; /* makes it shrink/grow with container */
+}
+
+/* Scale the SVG properly */
+.github-calendar svg {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .github-cards {
+    gap: 25px;
+  }
+  .section-title {
+    font-size: 2.6rem;
+  }
+  .github-calendar h3 {
+    font-size: 1.95rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .github-cards {
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .section-title {
+    font-size: 2.4rem;
+    margin-bottom: 45px;
+  }
+  .github-calendar h3 {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .github-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .github-calendar h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .github-calendar h3 {
+    font-size: 1.5rem;
+  }
+  .github-card {
+    flex: 1 1 100%; /* full width for small screens */
+    min-width: auto; /* reset min-width */
+  }
+}

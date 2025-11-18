@@ -4,7 +4,7 @@ import AOS from "aos";
 import jiwaji from "../../assets/jiwaji.jpg";
 import schoolIcon from "../../assets/excellence.jpg"; 
 import model from "../../assets/model.webp";
-
+import step from "../../assets/step.png";
 import { FaGraduationCap } from "react-icons/fa";
 import "aos/dist/aos.css";
 

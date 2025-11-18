@@ -52,7 +52,7 @@ const Certificate = () => {
     <section className="education-container" id="certificate">
       <div className="education-title">
         <FaCertificate className="title-icon" />
-        <h1>Certifications</h1>
+        <h1>CERTIFICATIONS</h1>
       </div>
 
       <div className="carousel-container">

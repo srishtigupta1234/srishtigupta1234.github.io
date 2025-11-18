@@ -1,4 +1,4 @@
-/* Full-Screen (PC) - 3 Boxes in a Row */
+
 .education-container {
   padding: 60px 30px;
   color: #fff;
@@ -16,8 +16,9 @@
 
 .education-title h1 {
   font-size: 2.8rem;
-  font-weight: 900;
-  text-shadow: 0 0 12px rgba(63, 207, 255, 0.9);
+  font-weight: 800;
+  text-shadow:  0 0 2px rgba(63, 207, 255, 0.4),   
+    0 0 6px rgba(63, 207, 255, 0.2);  
   letter-spacing: 1px;
 }
 
@@ -25,25 +26,23 @@
   font-size: 2.8rem;
   color: #3fcfff;
 }
-
-/* Updated Stepper Container */
 .education-stepper {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px; /* Increased gap for better spacing */
-  max-width: 1350px; /* Increased max-width to accommodate wider boxes */
+  gap: 30px;
+  max-width: 1350px; 
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
-/* Updated Step Div */
+
 .step {
-  /* Using calc() for precise control over the width */
   flex: 0 0 calc(33.33% - 20px);
   background: rgba(57, 47, 191, 0.074);
-  padding: 40px 30px; /* Increased padding to make the content area larger */
-  border-radius: 15px;
+  border: none; 
+  border-radius: 12px;
+  padding: 40px 30px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   transition: all 0.4s ease-in-out;
@@ -52,10 +51,8 @@
 .step:hover {
   cursor: pointer;
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 25px #7f7fff;
 }
 
-/* The rest of your CSS remains the same */
 .step-icon {
   background-color: #3fcfff;
   color: #fff;
@@ -63,18 +60,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 10px rgba(63, 207, 255, 0.7);
+}
+.step-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .step-connector {
-  position: absolute;
-  top: 50%;
-  right: -25px;
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(to right, #3fcfff, #7f7fff);
-  z-index: -1;
-  transform: translateY(-50%);
+  margin: 15px 0; 
+}
+
+.step-connector img {
+  width: 50px;    
+  height: auto;
 }
 
 .step:last-child .step-connector {
