@@ -10,6 +10,7 @@ import football from "../../assets/football.png";
 import game from "../../assets/game.png";
 import studentImg from "../../assets/student.png";
 import plantImg from "../../assets/plant.jpeg";
+import buzzbuy from "../../assets/buzzbuy.png";
 
 const Projects = () => {
   useEffect(() => {
@@ -17,6 +18,14 @@ const Projects = () => {
   }, []);
 
   const projects = [
+    {
+      title: "Buzzbuy – Full Stack E-Commerce Platform",
+      image: buzzbuy, // make sure you import this image
+      description:
+        "A full-stack e-commerce web application with user authentication, product management, cart, and order flow. Built using React for the frontend, Spring Boot for the backend, MySQL for the database, and JWT-based authentication. Designed with a clean UI and scalable architecture.",
+      github: "https://github.com/srishtigupta1234/Buzzbuy_Ecommerce_Web",
+      demo: "https://buzzbuyecommerce.vercel.app",
+    },
     {
       title: "Digital Gram Panchayat",
       image: dgpImg,
@@ -33,15 +42,6 @@ const Projects = () => {
       github: "https://github.com/srishtigupta1234/Career_Campus",
       demo: "https://courageous-crepe-96002b.netlify.app/home",
     },
-    {
-      title: "Upcoming Football Events",
-      image: football,
-      description:
-        "A frontend application that displays upcoming football events in a clean and interactive way. Built using HTML, CSS, and JavaScript, focusing on responsive design and user-friendly event browsing.",
-      github: "https://github.com/srishtigupta1234/Upcoming-Fooball-Event",
-      demo: "https://marvelous-dango-d9f138.netlify.app/",
-    },
-
     {
       title: "Alien Invasion – Space Shooter Game",
       image: game,

@@ -137,13 +137,17 @@
 }
 
 .hero-connect {
-  background: linear-gradient(rgb(85, 75, 127), rgb(46, 39, 67));
+  background: linear-gradient(135deg, #5ebcff, #231c66);
 }
 
 .hero-connect:hover,
 .resume:hover {
   transform: scale(1.1);
   transition: 0.3s ease;
+}
+
+.hero-connect .anchor-link:hover{
+   color:white;
 }
 
 .hero-connect:hover {

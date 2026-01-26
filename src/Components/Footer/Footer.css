@@ -1,111 +1,217 @@
+/* Footer.css */
+
+/* --- Main Container (The Glass Card) --- */
 .footer {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  padding: 40px 30px;
-  background: rgba(255, 255, 255, 0.05);
-  color: #f5f5f5;
-  border-radius: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  margin: 0 auto 40px auto;
+  padding: 50px 60px;
+  
+  /* Advanced Glassmorphism */
+  background: rgba(20, 20, 20, 0.6); /* Slightly darker for better contrast */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  
+  /* Subtle Gradient Border */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Highlight top edge */
+  border-radius: 24px;
+  
+  /* Deep Shadow for 3D effect */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  
+  color: #e0e0e0;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+  overflow: hidden; /* Keeps internal glows inside the border */
+  position: relative;
 }
 
+/* Hover Effect: Lifts the card slightly */
 .footer:hover {
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
-.footer-top {
+.footer-container {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  gap: 50px;
 }
 
-.footer-top-left {
+/* --- Sections --- */
+.footer-section {
   flex: 1;
-  min-width: 280px;
+  min-width: 220px; /* Ensures columns don't get too squished */
 }
 
-.footer-top-left img {
-  height: 60px;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-
-.footer-top-left img:hover {
-  transform: scale(1.1);
-}
-
-.footer-top-left p {
-  font-size: 15px;
-  line-height: 1.8;
-  color: #fbfafa;
-  max-width: 450px;
-}
-
-hr {
-  border: 0.5px solid rgba(255, 255, 255, 0.1);
-  margin: 30px 0;
-}
-
-.footer-bottom {
+/* --- Brand Identity --- */
+.brand-header {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  font-size: 13px;
-  color: #f4f2f2;
-  gap: 20px;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  height: 55px;
+  width: auto;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+  transition: transform 0.5s ease;
+}
+
+.footer-logo:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.brand h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  /* Premium Gold/Silver Gradient */
+  background: linear-gradient(135deg, #ffffff 0%, #a5a5a5 100%);
+   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #b0b0b0;
+  max-width: 320px;
+  font-weight: 300;
+}
+
+/* --- Headings --- */
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline Effect for Headings */
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40px;
+  height: 3px;
+  background: #61dafb; /* React Blue Accent */
+  border-radius: 2px;
+}
+
+/* --- Links --- */
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links li {
+  margin-bottom: 12px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #b0b0b0;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
   align-items: center;
 }
 
-.footer-bottom-left {
-  flex: 1;
-  min-width: 200px;
+.links a:hover {
+  color: #61dafb;
+  padding-left: 8px; /* Smooth slide */
+  text-shadow: 0 0 10px rgba(97, 218, 251, 0.4);
 }
 
-.footer-bottom-right {
+/* --- Social Icons (The "Candy" Buttons) --- */
+.social-icons {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  flex: 1;
-  min-width: 200px;
+  gap: 15px;
 }
 
-.footer-bottom-right p {
-  cursor: pointer;
-  transition: color 0.3s, transform 0.3s;
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px; /* Soft square looks more modern than circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.3rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy effect */
 }
 
-.footer-bottom-right p:hover {
-  color: #f5c518;
-  transform: translateY(-2px);
+.social-icons a:hover {
+  background: #61dafb;
+  border-color: #61dafb;
+  color: #1a1a1a;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(97, 218, 251, 0.3); /* Neon Glow */
 }
 
-/* Responsive */
+/* --- Bottom Bar --- */
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  margin: 40px 0 25px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  font-weight: 400;
+}
+
+/* --- Mobile Responsiveness --- */
 @media screen and (max-width: 768px) {
   .footer {
-    padding: 30px 20px;
+    padding: 30px 25px;
+    width: 92%;
     margin-bottom: 20px;
   }
 
-  .footer-top {
+  .footer-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Center everything on mobile */
+    text-align: center;
+    gap: 40px;
   }
 
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+  .brand-header {
+    justify-content: center;
+    flex-direction: column; /* Stack logo above name on mobile */
+    gap: 10px;
+  }
+  
+  .footer-tagline {
+    margin: 0 auto; /* Center tagline */
   }
 
-  .footer-bottom-right {
-    justify-content: flex-start;
-    gap: 1rem;
+  .footer-section h4::after {
+    left: 50%; /* Center underline */
+    transform: translateX(-50%);
+  }
+
+  .links a:hover {
+    padding-left: 0; /* Disable slide on touch devices */
+    transform: scale(1.05);
+  }
+
+  .social-icons {
+    justify-content: center;
   }
 }
- 

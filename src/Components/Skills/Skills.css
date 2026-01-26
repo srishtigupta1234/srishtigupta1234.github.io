@@ -14,11 +14,10 @@
   justify-content: center;
   display: flex;
   gap: 10px;
-  text-shadow: 0 0 5px rgba(63, 207, 255, 0.6);
 }
 
 .skills-title .highlight {
-  color: #3fcfff;
+  color: #7df9ff;
 }
 
 /* CENTERED GRID */

@@ -28,21 +28,7 @@ const GitHubStats = () => {
 
   return (
     <section className="github-section">
-      <h2 className="section-title">GITHUB STATS<span> & CALENDAR</span></h2>
-
-      {/* Stats cards */}
-      <div className="github-cards">
-        <img
-          src={`https://github-readme-stats.vercel.app/api?username=${GITHUB_USERNAME}&show_icons=true&theme=dark&count_private=true`}
-          alt="GitHub Stats"
-          className="github-card"
-        />
-        <img
-          src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${GITHUB_USERNAME}&layout=compact&theme=dark`}
-          alt="Top Languages"
-          className="github-card"
-        />
-      </div>
+      <h2 className="section-title">GITHUB<span>  CALENDAR</span></h2>
 
       {/* Contribution Calendar */}
       <div className="github-calendar">

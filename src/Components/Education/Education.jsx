@@ -1,11 +1,7 @@
 import React, { useEffect } from "react";
 import "./Education.css";
 import AOS from "aos";
-import jiwaji from "../../assets/jiwaji.jpg";
-import schoolIcon from "../../assets/excellence.jpg"; 
-import model from "../../assets/model.webp";
-import step from "../../assets/step.png";
-import { FaGraduationCap } from "react-icons/fa";
+import { FaGraduationCap, FaUniversity, FaSchool } from "react-icons/fa";
 import "aos/dist/aos.css";
 
 const Education = () => {
@@ -16,7 +12,7 @@ const Education = () => {
   const steps = [
     {
       title: "Bachelor of Computer Applications (BCA)",
-      icon: jiwaji,
+      icon: <FaUniversity />, // Changed to Icon Component
       inst: "Jiwaji University, Gwalior",
       year: "2024 – Present",
       grade: "8.45 CGPA (Expected Graduation: 2027)",
@@ -27,7 +23,7 @@ const Education = () => {
     },
     {
       title: "Higher Secondary (Commerce + Mathematics)",
-      icon: schoolIcon,
+      icon: <FaSchool />, // Changed to Icon Component
       inst: "Govt. Excellence School, Gwalior",
       year: "2022 – 2024",
       grade: "87.8%",
@@ -38,14 +34,11 @@ const Education = () => {
     },
     {
       title: "Secondary (MP Board)",
-      icon: model,
+      icon: <FaSchool />, // Changed to Icon Component
       inst: "Model Kerela Higher Secondary School, Gwalior",
       year: "2020 – 2022",
       grade: "88.2%",
-      cert: {
-        text: "N/A",
-        link: "#",
-      },
+      cert: null, // Simplified logic for N/A
     },
   ];
 
@@ -59,14 +52,18 @@ const Education = () => {
       <div className="education-stepper">
         {steps.map((step, index) => (
           <div className="step" key={index} data-aos="fade-up">
+            {/* Icon Wrapper */}
             <div className="step-icon">
-              <img src={step.icon} alt={step.title} />
+              {step.icon}
             </div>
+
             <div className="step-content">
               <h2>{step.title}</h2>
               <p className="edu-inst">{step.inst}</p>
               <p className="edu-year">{step.year}</p>
               <p className="edu-grade">{step.grade}</p>
+              
+              {/* Conditional rendering for Certificate */}
               {step.cert && (
                 <div className="edu-cert">
                   <a
@@ -80,6 +77,8 @@ const Education = () => {
                 </div>
               )}
             </div>
+
+            {/* Connector Line (except for the last item) */}
             {index < steps.length - 1 && <div className="step-connector"></div>}
           </div>
         ))}

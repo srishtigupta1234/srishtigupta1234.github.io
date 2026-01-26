@@ -3,49 +3,64 @@ import "./Experience.css";
 import um from "../../assets/um.png";
 import google from "../../assets/google.png";
 import suretrust from "../../assets/suretrust.png";
-
+import gssoc from "../../assets/gssoclogo.png";
 const experiences = [
-    {
+  {
     title: "Google Student Ambassador",
     company: "Google",
     type: "Remote · Part-time",
-    time: "Aug 2025 – Present",
-    logo:google,
+    time: "Aug 2025 – Dec 2025",
+    logo: google,
     description:
       "Promote Google technologies and initiatives within the community, organize workshops, share insights about Google programs, and inspire peers to innovate.",
-    tech: ["Google Programs", "Community Outreach", "Public Speaking", "Event Management"],
-    certificate: "https://drive.google.com/file/d/1qLtJRdFY17_lUwvvIVqWGpxXq1DKZXZE/view?usp=sharing", 
+    tech: [
+      "Google Programs",
+      "Community Outreach",
+      "Public Speaking",
+      "Event Management",
+    ],
+    certificate:
+      "https://drive.google.com/file/d/1qLtJRdFY17_lUwvvIVqWGpxXq1DKZXZE/view?usp=sharing",
   },
   {
     title: "DSA + Java Intern",
     company: "Sure Trust",
     type: "Remote · Part-time · Present",
     time: "Jul 2025 – Dec 2025",
-    logo:suretrust,
+    logo: suretrust,
     description:
       "Solved 100+ Java & DSA problems, participated in mock interviews, and completed structured modules covering recursion, OOP, and collections.",
     tech: ["Java", "DSA", "OOP", "GitHub"],
-    certificate: "https://drive.google.com/file/d/1fhOS2gnw2o_MjlrLJ6BDEPQEEFej9ZC3/view?usp=sharing",
+    certificate:
+      "https://drive.google.com/file/d/1fhOS2gnw2o_MjlrLJ6BDEPQEEFej9ZC3/view?usp=sharing",
+  },
+  {
+    title: "Open Source Contributor",
+    company: "GirlScript Summer of Code (GSSoC)",
+    type: "Remote · Open Source",
+    time: "May 2025 – Aug 2025",
+    logo: gssoc,
+    description:
+      "Contributed to open-source projects by fixing bugs, improving features, and collaborating with maintainers and contributors in a remote development environment.",
+    tech: ["Git", "GitHub", "Open Source", "Collaboration", "Code Review"],
+    certificate: "https://drive.google.com/file/d/1ez9x4-zmbCsASCZIMi58cDz_hujqoxRE/view?usp=drive_link",
   },
   {
     title: "Web Development Intern",
     company: "Unified Mentor",
     type: "Remote · Full-time",
     time: "Apr 2025 – May 2025",
-    logo:um,
+    logo: um,
     description:
       "Built dynamic web applications using React, HTML, CSS, and Firebase. Developed reusable components and integrated real-time database functionalities.",
     tech: ["React", "HTML", "CSS", "Firebase", "GitHub"],
     certificate:
       "https://drive.google.com/file/d/1CD2q26C6XG7wAf6qXgtHHrpcgPyRDPsl/view?usp=sharing",
   },
-  
-
 ];
 
-
 const Experience = () => {
- return (
+  return (
     <div className="experience" id="experience">
       <div className="experience-title">
         <h1>
@@ -64,7 +79,11 @@ const Experience = () => {
             <div className="timeline-content">
               <h2>{exp.title}</h2>
               <h4 className="company-info">
-                <img src={exp.logo} alt={exp.company} className="company-logo" />
+                <img
+                  src={exp.logo}
+                  alt={exp.company}
+                  className="company-logo"
+                />
                 {exp.company} — <span>{exp.type}</span>
               </h4>
               <p>{exp.description}</p>

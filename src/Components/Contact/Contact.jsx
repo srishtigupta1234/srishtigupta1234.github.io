@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import "./Contact.css";
 import email from "../../assets/email.svg";
 import linkedin from "../../assets/linked.png";
@@ -8,7 +8,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Contact = () => {
-
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -25,9 +24,9 @@ const Contact = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json"
+        Accept: "application/json",
       },
-      body: json
+      body: json,
     }).then((res) => res.json());
 
     if (res.success) {
@@ -39,32 +38,46 @@ const Contact = () => {
   return (
     <div id="contact" className="getInTouch">
       <div className="git-title" data-aos="fade-up">
-        <h1>GET IN <span>TOUCH</span></h1>
+        <h1>
+          GET IN <span>TOUCH</span>
+        </h1>
       </div>
       <div className="department">
         <div className="git-left" data-aos="fade-right">
           <h1>Let's talk</h1>
           <p>
             I'm currently available to take on new projects, so feel free to
-            send me a message about anything you want me to work on. You can contact me anytime.
+            send me a message about anything you want me to work on. You can
+            contact me anytime.
           </p>
           <div className="contact-details">
             <div className="contact">
               <img src={email} alt="Email Icon" />
-              <p>srishtigupta97527@gmail.com</p>
+              <p>
+              <a href="mailto:srishtigupta97527@gmail.com?subject=Contact from Website&body=Hi Srishti,">
+                srishtigupta97527@gmail.com
+              </a></p>
             </div>
             <div className="contact">
               <img src={linkedin} alt="LinkedIn Icon" />
               <p>
-                <a href="https://www.linkedin.com/in/srishti-gupta-ab6092323/" target="_blank" rel="noreferrer">
-                  www.linkedin.com/in/srishti-gupta-ab6092323
+                <a
+                  href="https://www.linkedin.com/in/srishtigupta1/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  www.linkedin.com/in/srishtigupta1/
                 </a>
               </p>
             </div>
             <div className="contact">
               <img src={github} alt="GitHub Icon" />
               <p>
-                <a href="https://github.com/srishtigupta1234" target="_blank" rel="noreferrer">
+                <a
+                  href="https://github.com/srishtigupta1234"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   github.com/srishtigupta1234
                 </a>
               </p>
@@ -76,17 +89,38 @@ const Contact = () => {
           </div>
         </div>
 
-        <form onSubmit={onSubmit} className="contact-right" data-aos="fade-left">
+        <form
+          onSubmit={onSubmit}
+          className="contact-right"
+          data-aos="fade-left"
+        >
           <label>Your Name</label>
-          <input type="text" name="name" placeholder="Enter your name" required />
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
 
           <label>Your Email</label>
-          <input type="email" name="email" placeholder="Enter your email" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
 
           <label>Write your message here</label>
-          <textarea name="message" rows="8" placeholder="Enter your message" required></textarea>
+          <textarea
+            name="message"
+            rows="8"
+            placeholder="Enter your message"
+            required
+          ></textarea>
 
-          <button type="submit" className="contact-submit">Submit now</button>
+          <button type="submit" className="contact-submit">
+            Submit now
+          </button>
         </form>
       </div>
     </div>

@@ -4,9 +4,16 @@ import postman from "../../assets/Postman.png";
 import nsqf from "../../assets/NSQF.jpg";
 import um from "../../assets/certificateUM.jpg";
 import deloitte from "../../assets/deloitte.png";
+import gssoc from "../../assets/gssoc.jpg"
 import { FaCertificate, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const certificates = [
+  {
+    title: "Open Source Contributor – GSSoC",
+    organization: "GirlScript Summer of Code",
+    image: gssoc,
+    link: "https://drive.google.com/file/d/1ez9x4-zmbCsASCZIMi58cDz_hujqoxRE/view?usp=sharing",
+  },
   {
     title: "Postman api fundamental student expert",
     organization: "Postman",
@@ -38,13 +45,13 @@ const Certificate = () => {
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : certificates.length - 3
+      prevIndex > 0 ? prevIndex - 1 : certificates.length - 3,
     );
   };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex < certificates.length - 3 ? prevIndex + 1 : 0
+      prevIndex < certificates.length - 3 ? prevIndex + 1 : 0,
     );
   };
 

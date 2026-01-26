@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Hero.css";
-import me4 from "../../assets/profile.jpeg";
+import me4 from "../../assets/me.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Player } from "@lottiefiles/react-lottie-player";
 import animationData from "../../assets/Robot says hello.json";
@@ -68,13 +68,19 @@ const Hero = () => {
           My Resume
         </div>
       </div>
-      <Player
-        autoplay
-        loop
-        src={animationData}
-         className="lottie-animation"
-      
-      />
+      <div
+        onClick={() =>
+          window.open("mailto:srishtigupta97527@gmail.com", "_self")
+        }
+        style={{ cursor: "pointer" }}
+      >
+        <Player
+          autoplay
+          loop
+          src={animationData}
+          className="lottie-animation"
+        />
+      </div>
     </div>
   );
 };
