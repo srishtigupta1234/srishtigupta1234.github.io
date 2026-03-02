@@ -20,7 +20,7 @@ const experiences = [
       "Event Management",
     ],
     certificate:
-      "https://drive.google.com/file/d/1qLtJRdFY17_lUwvvIVqWGpxXq1DKZXZE/view?usp=sharing",
+      "https://drive.google.com/file/d/1WcibTewZqi-ZDS3W7zhZypA_tHMmv_g6/view?usp=sharing",
   },
   {
     title: "DSA + Java Intern",
